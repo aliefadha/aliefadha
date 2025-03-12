@@ -2,6 +2,9 @@
 FROM node:18-alpine AS builder
 WORKDIR /app
 
+# Memory optimization for build
+ENV NODE_OPTIONS="--max_old_space_size=1024"
+
 # Add package caching layer
 COPY package*.json ./
 RUN npm ci --prefer-offline --no-audit
@@ -13,7 +16,7 @@ COPY public ./public
 COPY src ./src
 COPY postcss.config.mjs ./
 
-# Build the application
+# Build with increased memory limit
 RUN npm run build
 
 # Production stage
