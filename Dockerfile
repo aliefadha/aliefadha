@@ -13,7 +13,7 @@ COPY public ./public
 COPY src ./src
 COPY postcss.config.mjs ./
 
-# Build the application (using standard build, not turbopack)
+# Build the application
 RUN npm run build
 
 # Production stage
@@ -24,12 +24,15 @@ ENV NODE_ENV=production
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-# Copy only necessary files
+# Copy package files
+COPY --from=builder /app/package*.json ./
+RUN npm ci --omit=dev --prefer-offline --no-audit
+
+# Copy built files
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
 EXPOSE 3000
 
-# Using the start script from package.json
-CMD ["npm", "run", "start"]
+CMD ["node", "server.js"]
