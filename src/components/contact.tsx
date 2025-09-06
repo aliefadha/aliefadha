@@ -42,17 +42,17 @@ export function Contact() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-foreground">Get In Touch</h2>
           <p className="text-lg text-muted-foreground text-balance">
-            Ready to work together? Let's discuss your next project
+            Ready to work together? Let&apos;s discuss your next project
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Let's Connect</h3>
+              <h3 className="text-2xl font-semibold mb-4">Let&apos;s Connect</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm always interested in hearing about new opportunities and exciting projects. Whether you're a company
-                looking to hire, or you're a fellow developer wanting to collaborate, I'd love to hear from you.
+                I&apos;m always interested in hearing about new opportunities and exciting projects. Whether you&apos;re a company
+                looking to hire, or you&apos;re a fellow developer wanting to collaborate, I&apos;d love to hear from you.
               </p>
             </div>
 
@@ -111,7 +111,7 @@ export function Contact() {
                 <MessageCircle className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
                 <CardTitle className="text-foreground">Send a Message</CardTitle>
               </div>
-              <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
+              <CardDescription>Fill out the form below and I&apos;ll get back to you as soon as possible.</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">

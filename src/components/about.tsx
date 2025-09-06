@@ -22,7 +22,7 @@ export function About() {
           <div className="space-y-8">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-                I'm a fullstack developer with over 2 years of experience building web applications that users love. I
+                I&apos;m a fullstack developer with over 2 years of experience building web applications that users love. I
                 specialize in React, Node.js, and modern web technologies.
               </p>
               <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
@@ -30,7 +30,7 @@ export function About() {
                 every project I work on is both functionally robust and delightfully intuitive.
               </p>
               <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-                When I'm not coding, you'll find me exploring new technologies, experimenting with side projects, and continuously improving my craft as a developer.
+                When I&apos;m not coding, you&apos;ll find me exploring new technologies, experimenting with side projects, and continuously improving my craft as a developer.
               </p>
             </div>
 
